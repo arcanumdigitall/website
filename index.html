@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+    <nav class="main-nav">
+        <img src="logo.png" alt="Website Logo" class="logo">
+        <ul>
+            <li><a href="sivu.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="employment.html">Employment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+       <a href="login.html" class="login-icon" title="Employee Login">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+             stroke="currentColor" class="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M12 12c2.28 0 4-1.72 4-4s-1.72-4-4-4-4 1.72-4 4 1.72 4 4 4zm0 2c-2.67 0-8 1.34-8 4
+                     v2h16v-2c0-2.66-5.33-4-8-4z" />
+        </svg>
+    </a>
+    </nav>
+</header>
+
+    <main>
+        <div class="text-section">
+            <h1>What Do We Do?</h1>
+            <p>We use our own AI model (SCALP-2) to make scalp trades.</p>
+        </div>
+
+        <div class="image-section">
+            <img src="Picture1.PNG" alt="Picture" class="main-image">
+        </div>
+
+        <div class="text-section">
+            <h1>SCALP-2</h1>
+            <p>Because AI doesn’t have human limitations, it can monitor a much larger amount of information in real time while trading.<br> This approach is much more precise and faster, doesn’t require breaks, and isn’t affected by stress.<br> Neural networks imitate the human brain, letting AI learn from past data and improve its trading decisions.<br> More techinical information about SCALP-2 in "About Us".</p>
+        </div>
+
+        <section class="comments-section">
+    <h2>What Our Investors Say</h2>
+
+    <div class="comment-box">
+        <button class="prev-btn">&#10094;</button>
+
+        <div class="comment-content">
+            <h3>James T.</h3>
+            <p>"The concept of AI-driven scalping fascinated me, and this company delivered exactly that — efficiency, speed, and accuracy."</p>
+        </div>
+
+        <button class="next-btn">&#10095;</button>
+    </div>
+</section>
+
+<script>
+    const comments = [
+        {
+            name: "James T.",
+            text: "The concept of AI-driven scalping fascinated me, and this company delivered exactly that — efficiency, speed, and accuracy."
+        },
+        {
+            name: "Ethan W.",
+            text: "What I appreciate most is the consistency. Even when the market gets unpredictable, the AI maintains control."
+        },
+        {
+            name: "Oliver S.",
+            text: "I don’t have time to follow crypto markets anymore, but this system handles everything automatically. It’s nice knowing professionals and AI are managing my assets 24/7."
+        },
+        {
+            name: "Ava L.",
+            text: "I joined during the SCALP-1 phase and have stayed ever since. The team continuously improves the algorithm — you can tell they care about both performance and stability."
+        }
+    ];
+
+    let current = 0;
+    const nameElement = document.querySelector('.comment-content h3');
+    const textElement = document.querySelector('.comment-content p');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    function showComment(index) {
+        nameElement.textContent = comments[index].name;
+        textElement.textContent = `"${comments[index].text}"`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        current = (current - 1 + comments.length) % comments.length;
+        showComment(current);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        current = (current + 1) % comments.length;
+        showComment(current);
+    });
+</script>
+
+        <footer>
+        <p>&copy; Arcanum Digital 2025</p>
+        <img src="logo.png" alt="Website Logo" class="footer-logo">
+         <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+    </div>
+
+    <p class="footer-disclaimer">
+        Disclaimer: Trading cryptocurrencies involves substantial risk and may not be suitable for all investors. 
+    </p>
+    </footer>
+    </main>
+</body>
+</html>
