@@ -1,0 +1,47 @@
+/* Import general styles for header/footer */
+@import url('styles.css');
+
+/* Make body a flex column to push footer down */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content should take remaining space */
+main {
+    flex: 1;
+}
+
+/* Privacy Policy Content */
+.privacy-content {
+    max-width: 900px;
+    margin: 40px auto 40px; /* reduced top/bottom margin */
+    padding: 0 20px;
+}
+
+.privacy-content h1 {
+    text-align: center;
+    color: #2b68ff;
+    font-size: 2.5rem;
+    margin-bottom: 30px; /* reduced spacing */
+}
+
+.privacy-section {
+    background: #ffffff;
+    padding: 20px 25px; /* slightly reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    margin-bottom: 10px; /* reduced spacing between sections */
+}
+
+.privacy-section h2 {
+    color: #2b68ff;
+    margin-bottom: 8px; /* tighter spacing */
+}
+
+.privacy-section p {
+    font-size: 1rem;
+    line-height: 1.5; /* slightly tighter line height */
+    color: #444;
+}

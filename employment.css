@@ -1,0 +1,61 @@
+/* Import general styles for header/footer */
+@import url('styles.css');
+
+/* Make body a flex column to push footer down */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content should take remaining space */
+main {
+    flex: 1; /* ensures footer stays at bottom */
+}
+
+/* Employment Hero Section */
+.employment-hero {
+    text-align: center;
+    padding: 80px 20px 40px; /* reduced bottom padding */
+    background: linear-gradient(135deg, #e8eeff, #ffffff);
+}
+
+.employment-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px; /* tighter spacing */
+}
+
+.employment-hero p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 20px; /* reduced spacing below hero */
+}
+
+/* Employment Content */
+.employment-content {
+    max-width: 900px;
+    margin: 20px auto 40px; /* reduced top/bottom margin */
+    padding: 0 20px; /* minimal side padding */
+    flex: 1; /* allow content to expand */
+}
+
+.job-section {
+    background: #ffffff;
+    padding: 20px 25px; /* slightly reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    margin-bottom: 20px; /* reduced spacing between job sections */
+}
+
+.job-section h2 {
+    color: #2b68ff;
+    margin-bottom: 8px; /* slightly tighter spacing */
+}
+
+.job-section p {
+    font-size: 1rem;
+    line-height: 1.5; /* slightly tighter line height */
+    color: #444;
+}

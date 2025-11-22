@@ -1,0 +1,64 @@
+/* Import general styles for header/footer */
+@import url('styles.css');
+
+/* Make body a flex column to push footer down */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content should take remaining space */
+.login-section {
+    flex: 1; /* fills available space above footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #e8eeff, #ffffff);
+}
+
+/* Login Box */
+.login-box {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-box h2 {
+    color: #2b68ff;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box input {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.login-box button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2b68ff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #1a4ed0;
+}
